@@ -1,0 +1,18 @@
+# NeoBoot System Object
+# Boot initialization metadata
+
+[system]
+version=0.1.0-beta
+arch=x86_64
+uefi_version=2.10
+
+[init]
+graphics_mode=auto
+input_devices=keyboard,xbox-controller,dualsense-controller
+font=assets/NotoSans-Regular.ttf
+font_fallback=builtin
+controller_icons=builtin-vector
+
+[security]
+secure_boot=detect
+signature_check=optional

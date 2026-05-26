@@ -1,0 +1,18 @@
+[package]
+name = "neoboot"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "neoboot"
+path = "src/main.rs"
+
+[dependencies]
+uefi = { version = "0.32", features = ["alloc", "global_allocator", "logger", "panic_handler"] }
+log = "0.4"
+ttf-parser = { version = "0.24", default-features = false, features = ["no-std-float"] }
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = "z"

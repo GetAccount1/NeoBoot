@@ -1,0 +1,38 @@
+BOOT_PATH=        # Required. Must be a valid file system path and will be mounted on startup under /BOOT.
+                  # (Example: BOOT_PATH=/BOOT/VirtualStorage)
+
+INIT_PATH=        # Initialization path to the Linux kernel boot process.
+                  # (Example: INIT_PATH=/usr/sbin/init)
+
+KERNEL_PATH=      # Path to the kernel image stored on the USB device. The bootloader will load the kernel
+                  # and initialize user-space simultaneously. No folder creation is required;
+                  # place the kernel image directly at the specified path per boot selection.
+                  # (Example: KERNEL_PATH=/BOOT/bzImage)
+
+TITLE=            # Display name shown in the boot selection menu. If left empty, the boot path will be
+                  # used as the title instead.
+                  # (Example: TITLE=Gentoo Linux)
+
+DISK_SIZE=        # Sets the virtual disk size for this boot selection. Check available storage on the
+                  # portable device before setting. Recommended minimum: 32GB.
+                  # (Example: DISK_SIZE=32GB)
+
+TIMEOUT=          # Boot menu display timeout in seconds before the default entry is selected automatically.
+                  # Set to 0 to boot immediately without showing the menu.
+                  # (Example: TIMEOUT=5)
+
+DEFAULT=          # Marks this entry as the default boot selection when TIMEOUT expires.
+                  # Accepts: true or false.
+                  # (Example: DEFAULT=true)
+
+INITRD_PATH=      # Path to the initial RAM disk (initrd/initramfs) image. Loaded alongside the kernel
+                  # to provide early user-space before the root filesystem is mounted.
+                  # (Example: INITRD_PATH=/BOOT/initramfs.img)
+
+LOG_LEVEL=        # Controls the verbosity of boot-time kernel messages sent to the console.
+                  # Range: 0 (silent) to 7 (debug).
+                  # (Example: LOG_LEVEL=3)
+
+OTHER_PARAMETERS= # Extra raw kernel command-line parameters, appended as-is like GRUB/U-Boot/QEMU.
+                  # Use this for options such as console=ttyS0 rootwait rw quiet splash panic=3.
+                  # (Example: OTHER_PARAMETERS=console=ttyS0 earlyprintk=serial,ttyS0,115200)
