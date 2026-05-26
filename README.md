@@ -36,4 +36,5 @@ cargo build --release
 
 *The code must be GPL-Free or any license including strong copyleft license.
 
+credit artwork [闪光摇曳](https://www.bilibili.com/opus/1108227722801315881)
 ---
